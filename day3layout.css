@@ -1,0 +1,64 @@
+header {
+    background:#999;
+    color:white;
+    padding: 10px 15px 0px 15px;
+}
+/*for the entire header to have a background of grey and white text*/
+
+body {
+    margin: 0;
+}
+
+header h1 {
+    margin:0;
+    display: inline;
+}
+/*changes h1 under header to have no margin*/
+
+nav ul {
+    margin:0;
+    display: inline;
+    padding: 5;
+}
+/*changes ul under nav to have no margin*/
+/*h1 and ul are inline*/
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    background: black;
+    color:white;
+    padding: 5px 15px;
+}
+/*changes li under nav -> ul to have no bullet points*/
+/*inline-block makes all li on the same line*/
+/*padding changes inside of background while margin does the outside*/
+
+nav ul li a {
+    color:white;
+}
+/*Hyperlinks under nav's li are white instead of default blue*/
+
+.row:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+.col{
+    background: #222;
+    color: white;
+    padding: 0 .5%;
+    float: left;
+    margin: .5%;
+    width: 31%;
+    border-radius: 5px;
+}
+/*float makes everything float to the left/right of the page*/
+/*border-radius make rounded background corners*/
+/*Using percentage instead of px gives more flexibility as window size changes*/
+
+/*footer {
+    clear:both;
+}/*
+/*The footer is cleared of both left/right floats*/
