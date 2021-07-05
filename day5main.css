@@ -1,0 +1,9 @@
+#special{
+    color:red;
+}
+
+.done{
+    text-decoration: line-through;
+    color:grey;
+}
+
