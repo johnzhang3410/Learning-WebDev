@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--Uses the jquery library-->
+
+<html>
+    <head>
+        <title>learning JQuery</title>
+    </head>
+
+    <body>
+        <p id="paragraph">this is a paragraph</p>
+        <p id="paragraph2">this is a paragraph2</p>
+        <p id="paragraph3">this is a paragraph3</p>
+        <p id="paragraph4">this is a paragraph4</p>
+
+        <script src="jquery-3.6.0.js"></script>
+        
+
+        <script>
+            $(function(){
+                $("#paragraph").hide(300).show(1000);
+                $("#paragraph2").slideUp(1000).delay(1000).slideDown(1000);
+                $("#paragraph3").fadeOut(1000).fadeIn(1000);
+                $("#paragraph4").css({
+                    color:"red",
+                    fontWeight:"bold",
+                    opacity:"0.5"
+                })
+
+            });
+
+        </script>
+    </body>
+</html>
