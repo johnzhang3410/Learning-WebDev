@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--Uses the jquery library-->
+
+<html>
+    <head>
+        <title>learning JQuery</title>
+    </head>
+
+    <body>
+        <p id="paragraph1">this is a paragraph</p>
+        <p id="paragraph2">this is paragraph 2</p>
+        <p id="paragraph3">this is paragraph 3</p>
+        <p id="paragraph4">this is paragraph 4</p>
+
+        <button id="btn1" class="pbutton" data-paragraphId="paragraph1">btn1</button>
+        <button id='btn2' class="pbutton" data-paragraphId="paragraph2">btn2</button>
+        <button id='btn3' class="pbutton" data-paragraphId="paragraph3">btn3</button>
+        <button id='btn4' class="pbutton" data-paragraphId="paragraph4">btn4</button>
+
+        <script src="jquery-3.6.0.js"></script>
+        
+
+        <script>
+            $(function(){
+
+                $('#paragraph').html('new paragraph 1');
+
+                $('#btn1').on('click', function(){
+                    $('#paragraph1').slideToggle(200);
+                });
+
+                //toggles on the button that is being clicked, more concise code
+               $('.pbutton').on('click', function() {
+                   var paragraphId = $(this).attr('data-paragraphId');
+                   //Get the value of data-paragraphId of the button being clicked on and stores it in paragraphId
+                    $('#'+paragraphId).toggle();
+                    //It's like #paragraph1.toggle() or #paragraph2.toggle() etc. depending on which button is clicked
+
+               });
+            });
+
+        </script>
+    </body>
+</html>
